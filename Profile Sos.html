@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Card kaca */
+.card {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    animation: fadeIn 1.5s ease;
+}
+
+/* Foto */
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.profile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00f2fe;
+}
+
+/* Nama */
+h2 {
+    margin: 10px 0;
+}
+
+/* Tombol */
+.link {
+    display: block;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Neon effect */
+.link::before {
+    content: \"\";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: 0.5s;
+}
+
+.link:hover::before {
+    left: 100%;
+}
+
+/* Warna tombol */
+.ig { background: #e1306c; }
+.tt { background: #000; }
+.fb { background: #1877f2; }
+
+/* Hover */
+.link:hover {
+    transform: scale(1.05);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <img src="PROFILE.jpg" class="profile">
+
+    <h2>Andre Maulana</h2>
+    <p>🚀 Manusia biasa | Pemula</p>
+
+    <a href="https://www.instagram.com/andre_sigit12?igsh=MTZxOGkxbzQwMWQ4bg==" class="link ig" target="_blank">
+        Instagram
+    </a>
+
+    <a href="https://www.tiktok.com/@akyaa06?_r=1&_t=ZS-94xXZPYr7UP" class="link tt" target="_blank">
+        TikTok
+    </a>
+
+    <a href="https://www.facebook.com/share/1ARHzCt4YX/" class="link fb" target="_blank">
+        Facebook
+    </a>
+</div>
+
+
+</body>
+</html>
